@@ -1,7 +1,8 @@
+#include <iostream>
 #include "TicTacToe.h"
 
 TicTacToe::TicTacToe() {
-  game_status = PLAYER1;
+  status = PLAYER1;
   initialize_board();
   //Player p1 (HUMAN);
   //Player p2 (HUMAN);
@@ -14,11 +15,11 @@ TicTacToe::TicTacToe(int p1_type, int p2_type) {
 
 void TicTacToe::print() {
   for (int row = 0; row < 3; row++) {
-    cout << "----------" << endl;
+    std::cout << "----------" << std::endl;
     for (int col = 0; col < 3;  col++) {
-      cout << as_symbol(board[row][col]) << "|";
+      std::cout << as_symbol(board[row][col]) << "|";
     }
-    cout << endl;
+    std::cout << std::endl;
   }
 }
 
