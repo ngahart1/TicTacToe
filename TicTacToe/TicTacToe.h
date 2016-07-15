@@ -1,9 +1,10 @@
+enum game_status {PLAYER1, PLAYER2, DRAW, KEEP_PLAYING};
+enum player_type {HUMAN, COMPUTER};
+
 
 class TicTacToe {
  public:
-  enum game_status {PLAYER1, PLAYER2, DRAW, KEEP_PLAYING};
-  enum player_type {HUMAN, COMPUTER};
-
+ 
   TicTacToe();
   TicTacToe(int, int);
   int play();

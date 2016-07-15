@@ -19,10 +19,10 @@ int TicTacToe::getStatus() {
   return status;
 }
 
-int play() {
+int TicTacToe::play() {
   while (status == KEEP_PLAYING) {
-    status = this -> makeMove();
-    this -> print();
+    status = makeMove();
+    print();
   }
   return status;
 }
@@ -30,7 +30,7 @@ int play() {
 int TicTacToe::makeMove() {
   std::cout << "Player " << whose_turn << ", what is your move?" << std::endl;
   int first, second;
-  cin >> first >> second;
+  std::cin >> first >> second;
   board[first][second] = whose_turn;
 
   //check win in a row or column
