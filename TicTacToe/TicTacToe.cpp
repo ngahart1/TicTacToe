@@ -22,6 +22,7 @@ int TicTacToe::getStatus() {
 int play() {
   while (status == KEEP_PLAYING) {
     status = this -> makeMove();
+    this -> print();
   }
   return status;
 }
