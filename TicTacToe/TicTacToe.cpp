@@ -28,10 +28,22 @@ int TicTacToe::play() {
 }
 
 int TicTacToe::makeMove() {
-  std::cout << "Player " << whose_turn << ", what is your move?" << std::endl;
-  int first, second;
-  std::cin >> first >> second;
-  board[first][second] = whose_turn;
+  bool move_accepted = 0;
+  while(!move_accepted) {
+    std::cout << "Player " << whose_turn << ", what is your move?" << std::endl;
+    int first, second;
+    std::cin >> first >> second;
+    if (first == 'q') {
+      exit(0);
+    }
+    if (board[first][second] == 0) {
+      board[first][second] = whose_turn;
+      move_accepted = 1;
+    }
+    else {
+      std::cout << "Invalid move" << std::endl;
+    }
+  }
   whose_turn = 3-whose_turn; //maps 1 to 2 and 2 to 1
   
   //check win in a row or column
