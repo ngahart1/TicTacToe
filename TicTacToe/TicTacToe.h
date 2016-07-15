@@ -15,4 +15,4 @@ class TicTacToe {
   int board[3][3];
   char as_symbol(int);
   //Player p1, p2;
-}
+};
