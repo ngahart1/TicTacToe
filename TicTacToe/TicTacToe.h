@@ -6,14 +6,16 @@ class TicTacToe {
 
   TicTacToe();
   TicTacToe(int, int);
-  //int getStatus();
-  //int getTurn();
-  //int makeMove();
+  int play();
+  int getStatus();
+  int makeMove();
   void print();
   void initialize_board();
+
  private:
   int status;
   int board[3][3];
   char as_symbol(int);
+  int whose_turn;
   //Player p1, p2;
 };
