@@ -13,9 +13,13 @@ TicTacToe::TicTacToe(int p1_type, int p2_type) {
   initialize_board();
 }
 
+int TicTacToe::getStatus() {
+  return status;
+}
+
 void TicTacToe::print() {
   for (int row = 0; row < 3; row++) {
-    std::cout << "----------" << std::endl;
+    std::cout << "------" << std::endl;
     for (int col = 0; col < 3;  col++) {
       std::cout << as_symbol(board[row][col]) << "|";
     }
